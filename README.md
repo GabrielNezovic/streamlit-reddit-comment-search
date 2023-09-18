@@ -1,12 +1,17 @@
 # streamlit-reddit-comment-search
  A self-hosted website to search and save Reddit user comment history using Python, Streamlit and the Reddit API.
+ ___
+<h3>Installation and Setup</h3>
 <br>
-<br>
+
+
 * Tested with [Python 3.9](https://www.python.org/downloads/release/python-390/)
 <br>
 <details>
-<summary>HOW TO: Generate a Reddit API 'client_id' and 'client_secret'</summary>
- 
+<summary>
+ Generate a Reddit API 'client_id' and 'client_secret'
+</summary>
+ <br>
 
  1. Click on Create a new app in the Reddit app console: https://www.reddit.com/prefs/apps
  2. Name the app 'Reddit Comment Search'
