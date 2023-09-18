@@ -1,7 +1,7 @@
 # streamlit-reddit-comment-search
  ![screenshot](screenshot.png)
 
- A self-hosted website to search and save Reddit user comment history using Python, Streamlit and the Reddit API.
+ A self-hosted website to search and save [Reddit](https://www.reddit.com/) user comment history using Python, Streamlit and the Reddit API.
 <br>
 
  ___
@@ -30,13 +30,13 @@
 <br>
 
 
-Once you have your Reddit API details, Update these values in the search.py file:
+Once you have your Reddit API details, Update these values in the [search.py](https://github.com/GabrielNezovic/streamlit-reddit-comment-search/blob/main/search.py) file:
 ```
 client_id="XXX"
 client_secret="XXX"
 ```
 
-Save the search.py file and then use the run.bat file to handle the required dependencies and run the script:
+Save the search.py file and then use the [run.bat](https://github.com/GabrielNezovic/streamlit-reddit-comment-search/blob/main/run.bat) file to handle the required dependencies and run the script:
 ```
 run.bat
 ```
@@ -46,7 +46,7 @@ The following page will automatically launch in your browser once the dependenci
 http://localhost:1198/
 ```
 
-You can search for a username, query the comments and filter the date range.
+You can search for a username, query the users' comments and filter the historical date range (in days).
 
 The resulting comments are then individually saved as text files in the 'comments' folder using the filename format:
 ```
