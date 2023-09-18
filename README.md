@@ -2,7 +2,7 @@
  A self-hosted website to search and save Reddit user comment history using Python, Streamlit and the Reddit API.
 <br>
 <br>
-* Install [Python 3.9](https://www.python.org/downloads/release/python-390/)
+* Tested with [Python 3.9](https://www.python.org/downloads/release/python-390/)
 <br>
 <details>
 <summary>HOW TO: Generate a Reddit API 'client_id' and 'client_secret'</summary>
