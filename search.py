@@ -94,13 +94,13 @@ def main():
                 # Clear the prevous status message
                 search_results_message.empty()
                 
-                #Display the search results
+                # Display the search results
                 with search_results.status("Search Results", expanded=True):
                     search_comments_by_user(username, query, date_range)
-                #Display a success message
+                # Display a success message
                 search_results_message.success("Matching comments saved to the 'comments' folder.")
                 
-                # Set the Success sessions tate
+                # Set the Success session state
                 success = True
                 st.session_state["success"] = success
                 
