@@ -46,11 +46,11 @@ The following page will automatically launch in your browser once the dependenci
 http://localhost:1198/
 ```
 
-You can search for a username, query the users' comments and filter the historical date range (in days).
+You can search for a Username, Query the users' comments (blank queries will simply retrieve all comments) and Filter the search for comments made within the last X number of days.
 
 The resulting comments are then individually saved as text files in the 'comments' folder using the filename format:
 ```
-timestamp - username - query.txt
+comment_datestamp - username - query.txt
 ```
 
 ___
@@ -58,6 +58,7 @@ ___
 
 Open TCP Network Port 1198 to allow communication with Streamlit.
 
+Only one copy of run.bat can be running at a time. If run.bat stalls on launch, open task manager and close down any running intances of python.exe and then try run.bat again.
 
 ___
 <h3>Dependencies</h3>
