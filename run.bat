@@ -1,6 +1,6 @@
 @echo off
+rem Set the working directory to the current folder
 cd /d %~dp0
-echo The current directory is: %CD%
 
 rem Define the loading bar characters and length
 set "loading_chars=-"
@@ -21,7 +21,9 @@ set "loading_bar="
 rem Function to display loading bar
 :display_loading_bar
 cls
-echo Welcome to Reddit Comment Search!
+echo Welcome to Reddit Comment Search by GabrielNezovic
+echo.&echo The current working directory is:
+echo %CD%
 echo.&echo Checking on required packages:
 if not "!error_flag!"=="" (
     echo.&echo Error: An error occurred during installation.

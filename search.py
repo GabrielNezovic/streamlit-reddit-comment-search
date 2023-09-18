@@ -3,12 +3,12 @@ import datetime
 import os
 import streamlit as st
 
-# HOW TO GET YOUR REDDIT API CLIENT_ID AND CLIENT_SECRET #
+# HOW TO: Generate a Reddit API 'client_id' and 'client_secret' #
 
 # 1. Click on Create a new app in the reddit app console: https://www.reddit.com/prefs/apps
 # 2. Name the app 'Reddit Comment Search'
 # 3. Select 'Script' from the list of radio buttons
-# 4. Add ther description 'A python script to search through reddit comment history."
+# 4. Add the description 'A python script to search through reddit comment history."
 # 5. Use your public IP address as the about url and the redirect uri
 # 6. Confirm your status as a human
 # 7. The client_id will be the short-ish string of random characters underneath the name of the application
@@ -53,20 +53,23 @@ def search_comments_by_user(username, query, date_range):
                 with open(os.path.join("comments", filename), "w", encoding="utf-8") as file:
                     file.write(comment.body)
                     st.success(filename)
-
-st.title("Reddit Username Search")
-# Retrieve and save matching comments
-with st.form("Search"):
-    col1,col2,col3 = st.columns(3)
-    with col1:
-        username = st.text_input("Username", placeholder="Snoo")
-    with col2:
-        query = st.text_input("Search Query", placeholder="Alien")
-    with col3:
-        date_range = st.text_input("Date Filter", placeholder="365", help="How many days of comment history to filter (from todays date), eg to filter the last 1 year of comments, type '365'")
-    
-    if st.form_submit_button("Search Comments", type="secondary", use_container_width=True):
-        with st.status("Search Results"):
-            search_comments_by_user(username, query, date_range)
-    
-        st.success("Matching comments saved to the 'comments' folder.")
+def main():
+    st.title("Reddit Comment Search")
+    # Create the search input boxes
+    with st.form("Search"):
+        col1,col2,col3 = st.columns(3)
+        with col1:
+            username = st.text_input("Username", placeholder="Snoo")
+        with col2:
+            query = st.text_input("Search Query", placeholder="Alien")
+        with col3:
+            date_range = st.text_input("Date Filter", placeholder="365", help="Filter the comment history by X days from todays date, eg use '365' to search for the last 1 year of comments.''")
+        # Retrieve and save matching comments
+        if st.form_submit_button("Search Comments", type="secondary", use_container_width=True):
+            with st.status("Search Results"):
+                search_comments_by_user(username, query, date_range)
+        
+            st.success("Matching comments saved to the 'comments' folder.")
+            
+if __name__ == "__main__":
+    main()
