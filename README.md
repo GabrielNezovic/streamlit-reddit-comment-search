@@ -1,5 +1,9 @@
 # streamlit-reddit-comment-search
+ ![screenshot](screenshot.png)
+
  A self-hosted website to search and save Reddit user comment history using Python, Streamlit and the Reddit API.
+<br>
+
  ___
 <h3>Installation and Setup</h3>
 <br>
